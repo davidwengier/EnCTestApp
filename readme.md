@@ -1,0 +1,1 @@
+Just a simple test app I use for Edit and Continue/Hot Reload development.
