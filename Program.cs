@@ -14,46 +14,34 @@ public class Program
             Console.WriteLine(DateTime.Now.ToString());
             Console.WriteLine();
 
-            M();
+            try
+            {
+                Console.WriteLine("Calling M1");
+                M1();
+                Console.WriteLine("After Calling M1");
 
-            PrintMembersWithParameters();
+                Console.WriteLine("Calling M2");
+                M2();
+                Console.WriteLine("After Calling M2");
+            }
+            catch
+            {
+                Console.WriteLine("A problem happened!");
+            }
+
+            PrintMembers();
 
             Thread.Sleep(500);
         }
     }
 
-    public static void M()
+    public static void M1()
     {
-        Console.WriteLine(M2().ToString());
-
-        //string L(int x, long y)
-        //{
-        //    return $"""
-        //        x is:
-        //            - {x.GetType().Name}
-        //            - equal to '{x}'
-
-        //        """ +
-        //             $"""
-        //        y is
-        //            - {y.GetType().Name}
-        //            - equal to '{y}'
-
-        //        """ +
-        //             $"""
-        //        this method is
-        //            - named '{GetMethodName()}'
-        //        """;
-        //}
+        Console.WriteLine("I'm in M1 version 1");
     }
 
-    private static string M2()
+    public static void M2()
     {
-        var sb = new StringBuilder();
-        sb.Append($"""
-            this method is
-                - named '{GetMethodName()}'
-            """);
-        return sb.ToString();
+        Console.WriteLine("I'm in M2 version 2");
     }
 }

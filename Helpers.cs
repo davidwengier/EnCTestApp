@@ -4,10 +4,14 @@ namespace EnCTestApp;
 
 public static class Helpers
 {
-    public static void PrintMembersWithParameters()
+    public static void PrintMembers()
     {
-        int row = 2;
         int col = 50;
+
+        Console.SetCursorPosition(col, 0);
+        Console.Write("Methods in this assembly:");
+
+        int row = 2;
         var t = typeof(Program);
         foreach (var m in t.GetMethods(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.DeclaredOnly))
         {
