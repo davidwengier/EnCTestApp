@@ -16,13 +16,17 @@ public class Program
 
             try
             {
-                Console.WriteLine("Calling M1");
-                M1();
-                Console.WriteLine("After Calling M1");
+                Console.WriteLine("Calling A");
+                A();
+                Console.WriteLine("After Calling A");
 
-                Console.WriteLine("Calling M2");
-                M2();
-                Console.WriteLine("After Calling M2");
+                Console.WriteLine("Calling B");
+                B();
+                Console.WriteLine("After Calling B");
+
+                Console.WriteLine("Calling C");
+                C();
+                Console.WriteLine("After Calling C");
             }
             catch
             {
@@ -35,13 +39,18 @@ public class Program
         }
     }
 
-    public static void M1()
+    public static void A()
     {
-        Console.WriteLine("I'm in M1 version 1");
+        Console.WriteLine("Hello from A");
     }
 
-    public static void M2()
+    public static void B()
     {
-        Console.WriteLine("I'm in M2 version 2");
+        Console.WriteLine("Hello from B");
+    }
+
+    public static void C()
+    {
+        Console.WriteLine("Hello from C");
     }
 }
