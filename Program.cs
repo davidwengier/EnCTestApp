@@ -11,21 +11,31 @@ public class Program
         {
             Console.Clear();
             Console.SetCursorPosition(0, 0);
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(DateTime.Now.ToString());
             Console.WriteLine();
 
             try
             {
+                Console.ResetColor();
                 Console.WriteLine("Calling A");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 A();
+                Console.ResetColor();
                 Console.WriteLine("After Calling A");
 
+                Console.ResetColor();
                 Console.WriteLine("Calling B");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 B();
+                Console.ResetColor();
                 Console.WriteLine("After Calling B");
 
+                Console.ResetColor();
                 Console.WriteLine("Calling C");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 C();
+                Console.ResetColor();
                 Console.WriteLine("After Calling C");
             }
             catch
